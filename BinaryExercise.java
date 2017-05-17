@@ -1,10 +1,12 @@
 import java.util.Arrays;
+
 /**
  * Write a description of class BinaryExercise here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Richard Alcala Cuba
+ * @version 0.1
  */
+
 public class BinaryExercise
 {
     
@@ -20,27 +22,18 @@ public class BinaryExercise
         return binary;
     }
     
-    
     //ByClass
-    //public static int [] calculateBinaryArraySize(int n){
-      //  int length=1;
-      //  return length;
-    //}
+    public static int calculateBinaryArraySize(int n){
+        int length=1;
+        while(n>1){
+            length++;
+            n = n/2;
+        }        
+        return length;
+    }
     
     //ByClass
     public static void swapExtremeBits(int [] array){
-        
-        /*
-        int initValue = array[0];
-        int finalValue = array[array.length -1];
-        
-        array[0] = finalValue;
-        array[array.length -1] = initValue;
-        
-        
-        for(int index = array.length -1; index >= 0; index--){
-        }
-        */
        int aux;
        
        for(int index = 0; index <=array.length/2; index++){
@@ -51,6 +44,19 @@ public class BinaryExercise
        }
     }
     
+    //ByClass
+    public static int toDecimal(int [] binaryArray){
+        int value = 0;
+        int last = binaryArray.length -1;
+        for(int index = binaryArray.length-1; index>=0; index--){
+            value += binaryArray[index] * (int) Math.pow(2, last - index);
+        }
+        
+        return value;
+    }
+    
+    
+    // --------------------------------------------------------------------------------------
     // ByRac
     public static int [] convertToBinary(int decimalNumber)
     {

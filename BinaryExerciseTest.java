@@ -8,8 +8,8 @@ import org.junit.Test;
 /**
  * The test class binaryOfZeroIsZero.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  Richard Alcala Cuba
+ * @version 0.1
  */
 public class BinaryExerciseTest
 {
@@ -48,6 +48,20 @@ public class BinaryExerciseTest
         BinaryExercise.swapExtremeBits(array);
         assertArrayEquals(expected, array);
     }
+    
+    @Test
+    public void convertBinaryArrayToDecimal1_to_1()
+    {
+        assertEquals(1, BinaryExercise.toDecimal(new int []{1}));
+    }
+    
+    @Test
+    public void convertBinaryArrayToDecimal1_1_0to_6()
+    {
+        assertEquals(6, BinaryExercise.toDecimal(new int []{1,1,0}));
+    }
+    
+    // --------------------------------------------------------------------------------------
     
     
     //ByRAC update and delete later
